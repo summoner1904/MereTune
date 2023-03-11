@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>MereTune</title>
+    <link rel="stylesheet" href = "{% static 'css_index/Navbar-With-Button-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap_index/css/bootstrap.min.css' %}">
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-light navbar-expand-md py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}"><span class="fs-1 fw-bolder text-danger">MERETUNE</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active fs-5 link-light" href="{% url 'index' %}">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 link-light" href="#">О нас</a></li>
+                    <li class="nav-item"></li>
+                </ul><a href="{% url 'sign_in' %}"><button class="btn btn-danger" type="button">Войти</button></a>
+            </div>
+        </div>
+    </nav>
+    <section class="text-warning">
+        <section class="text-warning">
+          <div class="background-image" style="height: 600px;background: url(https://img.freepik.com/free-vector/circles-background-in-dark-tones_60389-166.jpg?w=1380&t=st=1678381108~exp=1678381708~hmac=b94585a36a12359a3425598a5625a417e1a8de43fc56977386f55fd5b404eee5) center / cover;">
+            <section class="py-4 py-xl-5">
+              <div class="container h-100">
+                <div class="row h-100">
+                  <div class="col-md-10 col-xl-8 text-center d-flex d-sm-flex d-md-flex justify-content-center align-items-center mx-auto justify-content-md-start align-items-md-center justify-content-xl-center">
+                    <div>
+                      <h2 class="text-uppercase fw-bold text-danger mb-3"><br><br>рЕГИСТРАЦИЯ В 1 КЛИК</h2>
+                      <p class="text-danger mb-4">Присоединитесь к нашему сообществу прямо сейчас!<br><br></p>
+                      <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#registrationModal">
+                          <h4 style="text-align: center; padding-top: 10px;">Регистрация</h4>
+                        </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+        <!-- Модальное окно -->
+
+        <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-danger" id="registrationModalLabel">Регистрация</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-danger">
+                <form>
+                  <div class="mb-3">
+                    <label for="emailInput" class="form-label">Электронная почта</label>
+                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="loginInput" class="form-label">Логин</label>
+                    <input type="text" class="form-control" id="loginInput">
+                  </div>
+                  <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Пароль</label>
+                    <input type="password" class="form-control" id="passwordInput">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-danger">Зарегистрироваться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container h-100 position-relative" style="top: -50px;">
+            <div class="row gy-5 gy-lg-0 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <div class="col">
+                    <div class="card fs-5">
+                        <div class="card-body bg-dark pt-5 p-4">
+                            <div class="bs-icon-lg bs-icon-rounded bs-icon-primary bg-danger d-flex flex-shrink-0 justify-content-center align-items-center position-absolute mb-3 bs-icon lg" style="top: -30px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-cash-coin">
+                                    <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"></path>
+                                    <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"></path>
+                                    <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"></path>
+                                    <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"></path>
+                                </svg></div>
+                            <h4 class="text-light card-title">Roulette</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Классический режим</h6>
+                            <p class="text-white card-text">Классическая рулетка, состоящая из 15 цифр (от 0 до 14). Вам предстоит угадать - какой цвет выпадет. В случае угадывания зеленого цвета выплата X14, в случае угадывания красного/зеленого X2.<br><br></p>
+                        </div>
+                        <div class="card-footer bg-dark p-4 py-3"><a class="link-warning" href="#">Играть&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                </svg></a></div>
+                    </div>
+                </div>
+                <div class="col fs-5">
+                    <div class="card">
+                        <div class="card-body bg-dark pt-5 p-4">
+                            <div class="bs-icon-lg bs-icon-rounded bs-icon-primary bg-danger d-flex flex-shrink-0 justify-content-center align-items-center position-absolute mb-3 bs-icon lg" style="top: -30px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-dice-2">
+                                    <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3z"></path>
+                                    <path d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm8 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path>
+                                </svg></div>
+                            <h4 class="text-light card-title">Dice</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Классический режим</h6>
+                            <p class="text-white card-text">Классический Dice. Суть игры состоит в том, чтобы угадать какое число выпадет на кубике. В случае угадывания выплата составляет X6. В случае проигрыша Coins списываются со счёта.<br><br></p>
+                        </div>
+                        <div class="card-footer bg-dark p-4 py-3"><a class="link-warning" href="#">Играть&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                </svg></a></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body fs-5 bg-dark pt-5 p-4">
+                            <div class="bs-icon-lg bs-icon-rounded bs-icon-primary bg-danger d-flex flex-shrink-0 justify-content-center align-items-center position-absolute mb-3 bs-icon lg" style="top: -30px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-up-right">
+                                    <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"></path>
+                                </svg></div>
+                            <h4 class="text-light card-title">Crash</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Классический режим</h6>
+                            <p class="text-white card-text">Классический краш. Системой генерируется случайный коэффициент. Ваша цель - суметь справиться с азартом и вовремя нажать кнопку "Вывести средства". В случае победы - выплачивается ставка, умноженная на коэффициент игры.</p>
+                        </div>
+                        <div class="card-footer bg-dark p-4 py-3"><a class="link-warning" href="#">Играть&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                                </svg></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'js_index/script.js' %}"></script>
+    <script src="{% static 'bootstrap_index/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
